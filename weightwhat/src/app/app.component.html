@@ -1,0 +1,58 @@
+<html>
+<body [ngClass]="{container: true}">
+    <div class="jumbotron">
+      <div>
+        <h1>CREATE ACCOUNT</h1>
+        <br>
+    		<form #credentialsForm="ngForm">
+    			<div class="form-group center-div">
+  			    <input 
+  			    required #username="ngModel" 
+             	[class.is-invalid]="username.invalid && username.touched"
+             	[(ngModel)]="credentialsModel.username"
+  			    class="form-control form-control-lg" type="text" placeholder="username" name="username">
+    			</div>
+    			<small class="text-danger" [class.d-none]="username.valid || username.untouched">Username is required</small>
+    			<br>
+
+    			<div class="form-group center-div">
+  			    <input 
+  			    required #password="ngModel" 
+  			    [class.is-invalid]="username.invalid && password.touched"
+  			    [(ngModel)]="credentialsModel.password"
+  			    class="form-control form-control-lg" placeholder="password" name="password" type="password">
+    			</div>
+    			<small class="text-danger" [class.d-none]="password.valid || password.untouched">Password is required</small>
+
+    			<br>
+
+    			<div class="form-group center-div">
+  			    <input
+  			    required #password2="ngModel" 
+  			    [class.is-invalid]="password2.invalid && password2.touched"
+  			    [(ngModel)]="credentialsModel.password2"
+  			    class="form-control form-control-lg" placeholder="repeat password" name="password2" type="password">
+    			</div>
+    			<small class="text-danger" [class.d-none]="password2.valid || password2.untouched">Please repeat password</small>
+    			<small class="text-danger" *ngIf="credentialsModel.password!=credentialsModel.password2 && credentialsModel.password.length!=0 && credentialsModel.password2.length!=0">Passwords do not match</small>
+
+    			<br>
+
+    			<div class="form-group center-div">
+			      <select [(ngModel)]="credentialsModel.lossPreference" class="custom-select" name="lossPreference">
+
+			        <option *ngFor="let option of options">{{option}} </option>
+			      </select>
+			    </div>
+
+			    <br>
+
+    			<div class="form-group center-div">
+    				<button class="btn btn-block btn-primary custom-btn" [ngStyle]="{'font-weight':'bold'}" (click)="senddata(credentialsForm.value)">Create Account</button>
+
+      			</div>
+    		</form>
+      </div>
+    </div>
+  </body>
+</html>

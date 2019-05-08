@@ -1,0 +1,61 @@
+
+
+.container {
+	background-image: linear-gradient(-224deg, #EEEEEE 0%, #80E2F6 43%, #D8D8D8 100%);
+}
+
+.jumbotron {
+	background-color: transparent;
+	text-align: center;
+	margin-top: 10%;
+}
+
+body {
+    background-attachment: fixed;
+
+}
+
+h1 {
+	font-family: Helvetica-Bold;
+	font-size: 58px;
+	color: #FFFFFF;
+	text-align: center;
+	text-shadow: 2px 1px 11px rgba(0,0,0,0.50);
+}
+
+.center-div {
+	margin: 0 auto;
+	width: 40%;
+}
+
+.inputfield{
+	height: 15%;
+}
+
+.link{
+	font-family: Helvetica-Oblique;
+	font-size: 33px;
+	color: #1D1383;
+	text-align: center;
+}
+
+.btn-primary.custom-btn {
+	opacity: 0.6;
+	background: #FA7D00;
+	border: 2px solid #979797;
+	border-radius: 8px;
+	height: 68px;
+}
+
+.btn-primary.custom-btn:active:focus {
+  color: #ffffff; 
+  background-color: #ff9900; 
+  border-color: #494F57;
+
+}
+
+
+
+
+
+
